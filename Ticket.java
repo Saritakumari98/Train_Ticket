@@ -70,10 +70,10 @@ public class Ticket {
 	{
 
 
-		String S=String.valueOf(train.getSource().charAt(0));
-		String D=String.valueOf(train.getDestination().charAt(0));;
+		String source=String.valueOf(train.getSource().charAt(0));
+		String destinaion=String.valueOf(train.getDestination().charAt(0));;
 		String date=TravelDate.format(DateTimeFormatter.ofPattern("YYYYMMdd"));
-		String pnr=S+D+"_"+date+"_"+counter++;
+		String pnr=source+destinaion+"_"+date+"_"+counter++;
 
 		if(TravelDate.isAfter(LocalDate.now()))
 			return pnr;
@@ -105,7 +105,7 @@ public class Ticket {
 	public void addPassenger(String name,int age,char gender)
 	{ 
 		
-      Passengers.put(new Passenger(name, age, gender),(int)calPassengerFare(new Passenger(name, age, gender)));
+            Passengers.put(new Passenger(name, age, gender),(int)calPassengerFare(new Passenger(name, age, gender)));
 	}
 
 	double calculateTotalTicketPrice()
