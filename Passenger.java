@@ -1,8 +1,9 @@
 package trainticket;
 
-import java.util.TreeMap;
+import java.util.*;
 
-public class Passenger {
+public class Passenger implements Comparable<Passenger>
+{
 	private String name;
 	private int age;
 	private char gender;
@@ -34,7 +35,16 @@ public class Passenger {
 	public String toString() {
 		return "Passenger [name=" + name + ", age=" + age + ", gender=" + gender + "]";
 	}
-
+       @Override
+	public int compareTo(Passenger p) {
+		if(age==p.age)
+		    return 0;
+		
+		else if(age < p.age)
+			return 1;
+		else
+			return -1;
+	}
 
 
 
