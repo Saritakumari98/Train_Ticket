@@ -12,7 +12,7 @@ public class Ticket {
 	private String pnr;
 	private LocalDate TravelDate;
 	private Train train;
-	private TreeMap <Passenger,Integer> Passengers;
+	TreeMap <Passenger,Integer> Passengers;
 
 
 
