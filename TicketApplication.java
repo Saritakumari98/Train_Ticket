@@ -36,19 +36,22 @@ public class TicketApplication {
 
 		System.out.println("Enter Number of Passengers");
 		int numberOfPassengers=sc.nextInt();
-		sc.nextLine();
+		
 
 		Train train =new Train(trainNo,trainName,"Banglore","Mumbai",2347.67);
 		Ticket ticket=new Ticket(travelDate,train);
-
+		
+                 sc.nextLine();
 		for(int i=1;i<=numberOfPassengers;i++)
 		{
 			System.out.println("Enter Passenger Name");
-			String name=sc.nextLine();
+			String name=sc.next();
+			sc.nextLine();
 
 			System.out.println("Enter Age");
 			int age=sc.nextInt();
-
+                        sc.nextLine();
+			
 			System.out.println("Enter Gender(M/F)");
 			String gender=sc.next();
 			char g=gender.charAt(0);
