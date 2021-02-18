@@ -19,7 +19,7 @@ public class TicketApplication {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 
-		System.out.println("======Welcome To Train Reservation=========");
+		System.out.println("======Welcome To Train Ticket Reservation=========");
 
 		System.out.println("Enter the Train Number");
 		int trainNo=sc.nextInt();
