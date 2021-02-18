@@ -12,7 +12,7 @@ public class Ticket {
 	private String pnr;
 	private LocalDate TravelDate;
 	private Train train;
-	private TreeMap Passengers;
+	private TreeMap <Passenger,Integer> Passengers;
 
 
 
@@ -105,12 +105,20 @@ public class Ticket {
 	public void addPassenger(String name,int age,char gender)
 	{ 
 		
-            Passengers.put(new Passenger(name, age, gender),(int)calPassengerFare(new Passenger(name, age, gender)));
+            Integer fare=(int) calPassengerFare(new Passenger(name, age, gender));
+		Passengers.put(new Passenger(name, age, gender),fare);
 	}
 
 	double calculateTotalTicketPrice()
 	{
-		return counter;
+		double totalPrice=0;
+		Collection<Integer> price=Passengers.values();
+		for(Integer values:price)
+		{
+			totalPrice=totalPrice+values;
+		}
+		
+		return totalPrice;
 
 	}
 
