@@ -39,7 +39,7 @@ public class TicketApplication {
 		System.out.println("Enter Number of Passengers");
 		int numberOfPassengers=sc.nextInt();
 		
-        sc.nextLine();
+                 sc.nextLine();
 		for(int i=1;i<=numberOfPassengers;i++)
 		{
 			System.out.println("Enter Passenger Name");
@@ -48,7 +48,7 @@ public class TicketApplication {
 			
 			System.out.println("Enter Age");
 			int age=sc.nextInt();
-             sc.nextLine();
+                        sc.nextLine();
              
 			System.out.println("Enter Gender(M/F)");
 			String gender=sc.next();
