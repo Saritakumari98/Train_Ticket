@@ -31,20 +31,17 @@ public class Passenger implements Comparable<Passenger>
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
+	
 	@Override
 	public String toString() {
-		return "Passenger [name=" + name + ", age=" + age + ", gender=" + gender + "]";
+		return  name +"                  "+ age +"              "+ gender;
 	}
-       @Override
+	
+	@Override
 	public int compareTo(Passenger p) {
-		if(age==p.age)
-		    return 0;
-		
-		else if(age < p.age)
-			return 1;
-		else
-			return -1;
+		return name.compareTo(p.name);
 	}
+
 
 
 
