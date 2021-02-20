@@ -1,0 +1,16 @@
+PNR   :BM_20211208_100
+TrainNo :1003
+Train Name :Udyan Express
+from :Bangalore
+to :Mumbai
+travelDate :08/12/2021
+
+
+Passengers :
+Name    	     Age	    Gender Fare
+Aman                 28              M    1500.0
+Mona                 24              F    375.0
+Pooja                 10              F    750.0
+Raja                 68              M    900.0
+
+totalPrice: 3525.0
