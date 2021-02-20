@@ -2,6 +2,7 @@ package trainticket;
 
 public class Train {
 
+	/*========  Variable declaration ===========*/
 	private int trainNo;
 	private String trainName;
 	private String source;
@@ -9,6 +10,7 @@ public class Train {
 	private double ticketprice;
 
 
+	/*=========  Constructor ================*/
 	public Train(int trainNo, String trainName, String source, String destination, double ticketprice) {
 		super();
 		this.trainNo = trainNo;
@@ -18,6 +20,8 @@ public class Train {
 		this.ticketprice = ticketprice;
 	}
 
+
+	/*=========   start of getter & setter methods======*/
 	public int getTrainNo() {
 		return trainNo;
 	}
@@ -57,7 +61,10 @@ public class Train {
 	public void setTicketprice(double ticketprice) {
 		this.ticketprice = ticketprice;
 	}
+	/*==========  end of getter & setter methods =================*/
 
+
+	/*=============== Overriding of toString method ================= */
 	@Override
 	public String toString() {
 		return "Train [trainNo=" + trainNo + ", trainName=" + trainName + ", source=" + source + ", destination="
