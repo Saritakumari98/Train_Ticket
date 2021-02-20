@@ -17,11 +17,11 @@ public class TrainDAO {
 		try
 		{   //step 1
 			Class.forName(DRIVER_NAME);
-			//System.out.println("class found");
+			System.out.println("class found");
 
 			//step 2
 			Connection con=DriverManager.getConnection(DB_URL,USERNAME,PASSWORD);
-			//System.out.println("connected");
+			System.out.println("connected");
 
 			//step 3
 			PreparedStatement pstmt=con.prepareStatement("select * from train where TRAIN_NO= ?");
@@ -35,13 +35,15 @@ public class TrainDAO {
 				train = new Train(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDouble(5));
 			}
 			con.close();
-			//System.out.println(train);
+
 		}
 		catch(Exception e)
 		{
-			//System.out.println("class not found");
+			
 			System.out.println(e);
 		}
+
+
 		return train;
 
 	}
