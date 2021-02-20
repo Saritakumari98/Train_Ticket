@@ -24,8 +24,8 @@ public class TicketApplication {
 		System.out.println("======Welcome To Train Reservation=========");
 
 		
-        TrainDAO traindao=new TrainDAO();
-        System.out.println("Enter the train Number");
+                TrainDAO traindao=new TrainDAO();
+                System.out.println("Enter the train Number");
 		Train train =traindao.findTrain(sc.nextInt());
 		
 		
